@@ -1,3 +1,4 @@
+/* Another way of styling wrt each component */
 .content{
     display: flex;
     flex-direction: column  ;

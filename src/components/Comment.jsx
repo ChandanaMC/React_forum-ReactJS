@@ -1,4 +1,5 @@
 import style from "./Comment.module.css"
+//"style" can be named anything
 const Comment = ({ body, name, email }) => {
     return (
         <div className={style.content}>

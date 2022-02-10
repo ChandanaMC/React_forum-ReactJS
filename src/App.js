@@ -30,7 +30,8 @@ function App() {
             render={(props) => <Homepage posts={posts} {...props} />}
           />
           <Route exact path="/post/:id" render={(props) => <Detailspage {...props} />} />
-          <Route path="/*" component={NotFound} />
+          {/* Leads to the error 404 page  */}
+          <Route path="*" component={NotFound} />
         </Switch>
       </header>
     </div>

@@ -2,8 +2,7 @@ import Comment from "../components/Comment"
 import NotFound from "../NotFound"
 
 const Post = ({ postId, comments }) => {
-    if (postId.id < 100) {
-        // console.log("C", comments)
+    if (postId.id <= 100) {
         return (
             <>
                 <div className="Post-details">
@@ -21,6 +20,8 @@ const Post = ({ postId, comments }) => {
         )
     } else {
         return (
+            // If we enter id more than 100 or any other character, 404 page is rendered
+            //from the NotFound component
             <NotFound />
         )
     }

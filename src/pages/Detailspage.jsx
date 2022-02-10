@@ -8,16 +8,16 @@ const Detailspage = (props) => {
   const [comments, setComments] = useState([]);
   const [postId, setPostId] = useState({});
   const { id } = useParams();
-  console.log(typeof (id));
-  console.log("id", id);
-
+  
   useEffect(() => {
+    // Fetch all comments for a post
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`)
       .then((response) => response.json())
       .then((json) => setComments(json));
   }, []);
 
   useEffect(() => {
+    // Fetch individual post wrt id if props.location property doesnt fetch it
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
       .then((response) => response.json())
       .then((json) => setPostId(json));
@@ -25,6 +25,7 @@ const Detailspage = (props) => {
 
   return (
     <div className="Detailspage">
+      {/* //Send postId to Comments which is either from location.details or fetched post */}
       <Post comments={comments} postId={props.location.details || postId} />
       <Link to="/"><button>Back to homepage</button></Link>
     </div>

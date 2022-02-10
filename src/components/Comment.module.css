@@ -1,0 +1,18 @@
+.content{
+    display: flex;
+    flex-direction: column  ;
+    align-self: auto;
+    align-items: center;
+    box-shadow: 10px 8px 16px 0 black;
+    border: 2px dotted black;
+    margin: 30px;
+    padding:30px;
+    background-color: #D56C06;
+    color:white;
+}
+
+.heading{
+    margin: 0;
+    color: #61082B;
+}
+
